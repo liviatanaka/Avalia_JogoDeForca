@@ -10,7 +10,7 @@ df = pd.DataFrame()
 for i in 'abcdefghijklmnopqrstuvwxyz':
     df[i] = []
 
-for x in range(124000, len(conteudo)):
+for x in range(0, len(conteudo)):
     i = conteudo[x]
     a = Counter(list(i))
     df.loc[i] = a
@@ -19,5 +19,4 @@ for x in range(124000, len(conteudo)):
         df = df.fillna(0)
         df = df.replace(0, -1)
         df = df.replace([i for i in range(20)], 1)
-        df.to_csv('frequencia2.csv')
-# print(df)
+        df.to_csv('frequencia1.csv')
