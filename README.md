@@ -31,6 +31,7 @@ Para isso, seguimos os seguintes passos:
     b. Escolhe a letra de acordo com o método selecionado. Os dois métodos são:
         * `letra_mais_frequente`: Probabilidade da letra na lista de palavras, ou seja, seleciona a letra que mais aparece nas palavras, de modo que, contabiliza o número de ocorrências de cada letra em cada palavras;  
         * `letra_mais_palavras`: Probabilidade da letra aparecer na palavra, ou seja, seleciona a letra que aparece em um maior número de palavras, independente do número de ocorrências da letra em uma mesma palavra;
+        * Vale ressaltar que, o jogador chuta a letra com maior probabilidade com o intuito de não perder vidas e não de tentar eliminar o máximo de palavras possíveis. Assim, optando por uma estratégia mais segura;
     c. Chuta a letra escolhida;
     d. Filtra a lista de palavras de acordo com o resultado do chute;
         * Caso a letra apareça na palavra, o jogador chuta considerando as suas posições na palavra;
@@ -44,10 +45,7 @@ Com a implementação do jogador inteligente, conseguimos aumentar as chances de
 
 ### Relacionando com a teoria
 
-É possível relaciona a estratégia que utilizamos para encontrar a palavra com o código de Hufmann, pois, assim como o código utiliza a probabilidade das letras para construir a árvore,
-
-
-ao utilizar a frequencia para escolher a letra que mais se repete no vocabulário, conseguimos diminuir o número de palavras possíveis que a palavra secreta pode ser, assim como o ``código de Hufmann, que utiliza a entropia para diminuir o número de bits necessários para representar uma palavra. Pois, assim como o código utiliza a probabilidade das letras para construir a árvore,
+É possível relaciona a estratégia que utilizamos para encontrar a palavra com o código de Hufmann, pois, assim como o código utiliza a probabilidade das letras para construir a árvore, o jogador utiliza a frequencia para escolher a letra que mais se repete no vocabulário. Assim, conseguimos diminuir o número de palavras possíveis que a palavra secreta pode ser, assim como o `código de Hufmann`, que utiliza a mesma lógica para diminuir o número de bits necessários para representar uma palavra. 
 
 
 * Bibliotecas utilizadas
